@@ -9,36 +9,26 @@ export default function ColorSliderMain() {
   const [lightness, setLightness] = useState(Math.ceil(Math.random() * 100))
 
   const updateColor = () => {
-    //update hue when page loads
+    //update hue, Saturation, Lightness when page loads
     setHue(Math.ceil(Math.random() * 360))
-    //const randomHue = Math.ceil(Math.random() * 360)
-    console.log(setHue)
-    //update saturation when page loads
+
     setSaturation(Math.ceil(Math.random() * 100))
-    //const randomSaturation = Math.ceil(Math.random() * 100)
-    console.log(setSaturation)
-    //update lightness when page loads
+
     setLightness(Math.ceil(Math.random() * 100))
-    //const randomLightness = Math.ceil(Math.random() * 100)
-    console.log(setLightness)
   }
+
+  //update Hue color when moving slider
   const updateHue = event => {
-    // const randomHue = Math.ceil(Math.random() * 360)
-    console.log(event.target.value)
     setHue(event.target.value)
-    //this.setState({ hue: event.target.value })
   }
+
+  //update Saturation color when moving slider
   const updateSaturation = event => {
     setSaturation(event.target.value)
-    //const randomSaturation = Math.ceil(Math.random() * 100)
-    //console.log(randomSaturation)
-    //this.setState({ saturation: event.target.value })
   }
+  //update Lightness color when moving slider
   const updateLightness = event => {
     setLightness(event.target.value)
-    // const randomLightness = Math.ceil(Math.random() * 100)
-    //console.log(randomLightness)
-    // this.setState({ lightness: event.target.value })
   }
   return (
     <main
